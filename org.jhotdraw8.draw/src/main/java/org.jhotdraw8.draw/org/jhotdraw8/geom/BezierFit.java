@@ -798,6 +798,7 @@ public class BezierFit {
     /**
      * Return the dot product of vectors a and b.
      */
+    // TODO: Avoid unused private methods such as 'v2Dot(Point2D,Point2D)' FIXME: This method needs to be removed as it is unused.
     private static double v2Dot(@NonNull Point2D a, @NonNull Point2D b) {
         return (a.getX() * b.getX()) + (a.getY() * b.getY());
     }

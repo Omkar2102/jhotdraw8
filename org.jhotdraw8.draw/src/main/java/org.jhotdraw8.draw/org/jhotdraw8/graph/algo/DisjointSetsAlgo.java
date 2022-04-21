@@ -46,6 +46,7 @@ public class DisjointSetsAlgo {
      * @param getNextVertices a function that returns the next vertices given a vertex
      * @return the disjoint sets.
      */
+    //TODO: Use equals() to compare object references, FIXME: This method needs to use equals() at line 58.
     public @NonNull <V> List<Set<V>> findDisjointSets(@NonNull Collection<V> vertices, @NonNull Function<V, Iterable<V>> getNextVertices) {
         // Create initial forest
         Map<V, List<V>> forest = MinimumSpanningTreeAlgo.createForest(vertices);

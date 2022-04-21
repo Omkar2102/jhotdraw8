@@ -13,7 +13,7 @@ import java.util.List;
 public class IntersectCirclePathIterator {
     private IntersectCirclePathIterator() {
     }
-
+// TODO: Avoid unused local variables such as 'status', FIXME: This method needs to remove unused local variables such as 'status' in line 19.
     public static @NonNull IntersectionResultEx intersectPathIteratorCircleEx(@NonNull PathIterator pit, double cx, double cy, double r) {
         List<IntersectionPointEx> result = new ArrayList<>();
         IntersectionStatus status = IntersectionStatus.NO_INTERSECTION;

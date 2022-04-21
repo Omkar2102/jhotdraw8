@@ -23,7 +23,7 @@ public abstract class AbstractStringCssFunction<T> extends AbstractCssFunction<T
 
     private static final ParseException parseException = new ParseException("〈---〉: String, Number, Dimension, Percentage or URL expected.", 0);
 
-// TODO:Avoid empty while statements ,FIXME: Remove while statement in line 34.
+
     protected @NonNull String evalString(@NonNull T element, @NonNull CssTokenizer tt, String expressionName, CssFunctionProcessor<T> functionProcessor) throws IOException, ParseException {
         StringBuilder buf = new StringBuilder();
         List<CssToken> temp = new ArrayList<>();
@@ -31,8 +31,8 @@ public abstract class AbstractStringCssFunction<T> extends AbstractCssFunction<T
         int count = 0;
 
         // skip white space
-        while (tt.next() == CssTokenType.TT_S) {
-        }
+        //while (tt.next() == CssTokenType.TT_S) {
+        //}
         tt.pushBack();
 
         functionProcessor.processToken(element, tt, temp::add, new ArrayDeque<>());

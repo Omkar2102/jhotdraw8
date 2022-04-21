@@ -198,6 +198,7 @@ public interface Resources {
      * @param arguments the arguments
      * @return formatted String
      */
+    // TODO: Avoid calling toString() on String objects; this is unnecessary,FIXME: This method needs to remove the toString() as it already is a String object,
     default @NonNull String format(@NonNull String key, Object... arguments) {
         //return String.format(resource.getLocale(), getString(key), arguments);
         return new Formatter(getLocale()).format(getString(key), arguments).toString();

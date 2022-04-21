@@ -32,7 +32,7 @@ import java.util.stream.Collectors;
  *
  * @author Werner Randelshofer
  */
-// TODO:Avoid unused private fields such as 'minSize' , FIXME: This method needs to remove this unused field.
+
 public class ConnectionTool extends AbstractTool {
 
     /**
@@ -46,7 +46,7 @@ public class ConnectionTool extends AbstractTool {
     /**
      * The minimum size of a created figure (in view coordinates.
      */
-    private double minSize = 2;
+    //private double minSize = 2;
 
     private @Nullable HandleType handleType = null;
 

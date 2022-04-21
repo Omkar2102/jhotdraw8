@@ -156,7 +156,7 @@ import static org.jhotdraw8.io.DataFormats.registerDataFormat;
  *
  * @author Werner Randelshofer
  */
-// TODO: Avoid unused method parameters such as 'grow', FIXME: This method needs to remove the unused parameter 'grow' in line 184
+
 public class GrapherActivity extends AbstractFileBasedActivity implements FileBasedActivity, EditorActivity {
 
     private static final String GRAPHER_NAMESPACE_URI = "http://jhotdraw.org/samples/grapher";
@@ -181,7 +181,8 @@ public class GrapherActivity extends AbstractFileBasedActivity implements FileBa
     private ToolBar toolsToolBar;
     private DockRoot dockRoot;
 
-    private @NonNull Dockable addInspector(@NonNull Inspector<DrawingView> inspector, String id, Priority grow) {
+    private @NonNull Dockable addInspector(@NonNull Inspector<DrawingView> inspector, String id,Priority grow) {
+        grow = grow;
         Resources r = InspectorLabels.getResources();
         Dockable dockable = new SimpleDockable(r.getString(id + ".toolbar"), inspector.getNode());
         inspector.showingProperty().bind(dockable.showingProperty());

@@ -1103,7 +1103,7 @@ public abstract class AbstractFXSvgWriter extends AbstractPropertyBean implement
     private void writeRegionStartElement(@NonNull XMLStreamWriter w, @NonNull Region region) throws IOException, XMLStreamException {
         w.writeStartElement("g");
     }
-
+// TODO:These nested if statements could be combined FIXME: This method needs to combine the nested if statements at line 1186
     private void writeRegionChildElements(@NonNull XMLStreamWriter w, @NonNull Region region) throws IOException, XMLStreamException {
 
         double x = region.getLayoutX();

@@ -243,7 +243,7 @@ public class FigureSvgTinyReader {
             }
         }
     }
-
+// TODO: A catch statement that catches an exception only to rethrow it should be avoided. FIXME: This method needs to remove the rethrowing catch statement
     public Figure read(@NonNull Source in) throws IOException {
         try {
 

@@ -32,6 +32,7 @@ import java.util.stream.Collectors;
  *
  * @author Werner Randelshofer
  */
+// TODO:Avoid unused private fields such as 'minSize' , FIXME: This method needs to remove this unused field.
 public class ConnectionTool extends AbstractTool {
 
     /**

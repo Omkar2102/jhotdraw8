@@ -43,7 +43,7 @@ public class CutEndPathBuilder<T> extends AbstractPathBuilder<T> {
     protected void doCurveTo(double x1, double y1, double x2, double y2, double x3, double y3) {
         path.curveTo(x1, y1, x2, y2, x3, y3);
     }
-// TODO:Avoid empty if statements,FIXME: This method needs to remove the empty if statement at line 62.
+
     @Override
     protected void doPathDone() {
         java.awt.geom.Point2D.Double currentPoint = getLastPoint();
@@ -60,7 +60,7 @@ public class CutEndPathBuilder<T> extends AbstractPathBuilder<T> {
             case PathIterator.SEG_CUBICTO: {
                 IntersectionResult isect = IntersectCircleCubicCurve.intersectCubicCurveCircle(x, y, seg[0], seg[1], seg[2], seg[3], seg[4], seg[5], cx, cy, radius);
                 if (isect.getStatus() == IntersectionStatus.NO_INTERSECTION_INSIDE) {
-                    // break Loop;
+                     break;
                 } else if (isect.isEmpty()) {
                     out.curveTo(seg[0], seg[1], seg[2], seg[3], seg[4], seg[5]);
                 } else {

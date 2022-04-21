@@ -43,7 +43,7 @@ public class CutEndPathBuilder<T> extends AbstractPathBuilder<T> {
     protected void doCurveTo(double x1, double y1, double x2, double y2, double x3, double y3) {
         path.curveTo(x1, y1, x2, y2, x3, y3);
     }
-
+// TODO:Avoid empty if statements,FIXME: This method needs to remove the empty if statement at line 62.
     @Override
     protected void doPathDone() {
         java.awt.geom.Point2D.Double currentPoint = getLastPoint();

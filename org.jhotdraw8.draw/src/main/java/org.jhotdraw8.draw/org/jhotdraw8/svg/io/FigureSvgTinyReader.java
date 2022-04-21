@@ -243,9 +243,9 @@ public class FigureSvgTinyReader {
             }
         }
     }
-// TODO: A catch statement that catches an exception only to rethrow it should be avoided. FIXME: This method needs to remove the rethrowing catch statement
+
     public Figure read(@NonNull Source in) throws IOException {
-        try {
+
 
             XMLInputFactory dbf = XMLInputFactory.newInstance();
 
@@ -301,11 +301,7 @@ public class FigureSvgTinyReader {
             setSizeOfDrawing(root);
 
             return root;
-        } catch (IOException e) {
-            throw e;
-        } catch (Exception e) {
-            throw new IOException(e);
-        }
+        
     }
 
     private void readAttributes(XMLStreamReader r, Figure node, Map<String, MapAccessor<?>> m, Context ctx) throws XMLStreamException {
